@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'students',
+    'sers',
 
     'django.contrib.admin',
     'django.contrib.auth',
