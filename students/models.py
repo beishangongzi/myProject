@@ -5,15 +5,15 @@ from django.db import models
 
 class Student(models.Model):
     SEX_OPTION = (
-        (0, "保密"),
+        (0, "unknown"),
         (1, "male"),
         (2, "female"),
     )
 
     name = models.CharField(max_length=20, verbose_name="name")
     age = models.SmallIntegerField(verbose_name="age")
-    sex = models.SmallIntegerField(choices=SEX_OPTION, verbose_name="sex"),
-    classmate = models.CharField(db_column="class", max_length=15, verbose_name="class")
+    sex = models.SmallIntegerField(choices=SEX_OPTION, verbose_name="sex", default=0)
+    classmate = models.CharField(db_column="class", max_length=15, verbose_name="class", default="cs")
     description = models.TextField(null=True, blank=True, verbose_name="bio")
 
     class Meta:
