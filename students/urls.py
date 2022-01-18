@@ -1,4 +1,5 @@
 from django.urls import path
+from rest_framework.routers import SimpleRouter, DefaultRouter
 
 from . import views
 
@@ -6,3 +7,7 @@ from . import views
 urlpatterns = [
         
 ]
+
+router = DefaultRouter()
+router.register("students", viewset=views.StudentModelViewSet, basename="stu")
+urlpatterns += router.urls
