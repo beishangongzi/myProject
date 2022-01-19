@@ -1,4 +1,4 @@
-from rest_framework.generics import GenericAPIView as View
+from rest_framework.generics import GenericAPIView
 from rest_framework.mixins import CreateModelMixin, ListModelMixin, RetrieveModelMixin, DestroyModelMixin, \
     UpdateModelMixin
 
@@ -6,7 +6,7 @@ from students.models import Student
 from .serializers import StudentSerializer
 
 
-class StudentListView(View, CreateModelMixin, ListModelMixin):
+class StudentListView(GenericAPIView, CreateModelMixin, ListModelMixin):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
@@ -17,7 +17,7 @@ class StudentListView(View, CreateModelMixin, ListModelMixin):
         return self.list(request, *args, **kwargs)
 
 
-class StudentDetailView(View, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin):
+class StudentDetailView(GenericAPIView, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
