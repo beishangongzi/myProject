@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'demo',
     'generic',
     'mixin',
+    'mixin_generic',
 
     'django.contrib.admin',
     'django.contrib.auth',

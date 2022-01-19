@@ -26,4 +26,5 @@ urlpatterns = [
     path("demo/", include("demo.urls")),
     path("generic/", include("generic.urls")),
     path("mixin/", include("mixin.urls")),
+    path("mixin-generic/", include("mixin_generic.urls")),
 ]
