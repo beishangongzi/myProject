@@ -12,6 +12,7 @@ class StudentSerializer(serializers.ModelSerializer):
         # fields = "__all__"
         # exclude = ["user"]
         read_only_fields = ["id"]
+        ref_name = "model_serializer"
 
         extra_kwargs = {
             "name": {

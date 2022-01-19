@@ -31,9 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'drf_yasg',
     'rest_framework',
     'django_filters',
 
+    'drf_yasg_doc',
     'students',
     'sers',
     'school',
@@ -152,4 +154,5 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': "rest_framework.pagination.PageNumberPagination",
     'PAGE_SIZE': 5,
     'EXCEPTION_HANDLER': "exception.exceptions.custom_exception_handler",
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema'
 }
