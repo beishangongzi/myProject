@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'mixin_generic_viewset',
     'mixin_generic_viewset_router',
     'authenticate_permission',
+    'throttle_test',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -151,5 +152,19 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
-    )
+    ),
+    # 有一条被限制那么就不能访问
+    'DEFAULT_THROTTLE_CLASSES': (
+
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+        # 'rest_framework.throttling.ScopedRateThrottle',
+
+    ),
+    # second minute hour day
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '100/second',
+        'user': '100/second',
+        'student': '1/s',
+    }
 }
