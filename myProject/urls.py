@@ -35,6 +35,7 @@ urlpatterns = [
     path("throttle_test/", include("throttle_test.urls")),
     path("filter/", include("filter.urls")),
     path("pagination/", include("pagination.urls")),
+    path("exception/", include("exception.urls")),
 
 
 

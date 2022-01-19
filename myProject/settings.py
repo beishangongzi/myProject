@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'throttle_test',
     'filter',
     'pagination',
+    'exception',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -149,5 +150,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': "rest_framework.pagination.PageNumberPagination",
-    'PAGE_SIZE': 5
+    'PAGE_SIZE': 5,
+    'EXCEPTION_HANDLER': "exception.exceptions.custom_exception_handler",
 }
