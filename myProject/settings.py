@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'sers',
     'school',
     'req',
+    'demo',
 
     'django.contrib.admin',
     'django.contrib.auth',
