@@ -30,4 +30,5 @@ urlpatterns = [
     path("viewset/", include("viewset.urls")),
     path("generic-viewset/", include("generic_viewset.urls")),
     path("mixin-generic-viewset/", include("mixin_generic_viewset.urls")),
+    path("mixin-generic-viewset-router/", include("mixin_generic_viewset_router.urls")),
 ]
