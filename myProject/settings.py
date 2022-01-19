@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mixin',
     'mixin_generic',
     'viewset',
+    'generic_viewset',
 
     'django.contrib.admin',
     'django.contrib.auth',
