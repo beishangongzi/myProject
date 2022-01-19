@@ -25,4 +25,5 @@ urlpatterns = [
     path("req/", include("req.urls")),
     path("demo/", include("demo.urls")),
     path("generic/", include("generic.urls")),
+    path("mixin/", include("mixin.urls")),
 ]
