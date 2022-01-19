@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
+    'django_filters',
 
     'students',
     'sers',
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'mixin_generic_viewset_router',
     'authenticate_permission',
     'throttle_test',
+    'filter',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -144,27 +146,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'authenticate_permission.authentication.CustomAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    # 有一条被限制那么就不能访问
-    'DEFAULT_THROTTLE_CLASSES': (
-
-        'rest_framework.throttling.AnonRateThrottle',
-        'rest_framework.throttling.UserRateThrottle',
-        # 'rest_framework.throttling.ScopedRateThrottle',
-
-    ),
-    # second minute hour day
-    'DEFAULT_THROTTLE_RATES': {
-        'anon': '100/second',
-        'user': '100/second',
-        'student': '1/s',
-    }
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_FILTER_BACKENDS': (
+#         'django_filters.rest_framework.DjangoFilterBackend',
+#         'rest_framework.filters.OrderingFilter',
+#     )
+# }
