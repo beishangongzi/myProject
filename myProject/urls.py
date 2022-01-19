@@ -21,5 +21,6 @@ urlpatterns = [
     path('students/', include('students.urls')),
     path("sers/", include("sers.urls")),
     path("model_serializer/", include("model_serializer.urls")),
-    path("school/", include("school.urls"))
+    path("school/", include("school.urls")),
+    path("req/", include("req.urls")),
 ]
