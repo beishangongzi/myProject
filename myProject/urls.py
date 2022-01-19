@@ -34,6 +34,7 @@ urlpatterns = [
     path("authenticate_permission/", include("authenticate_permission.urls")),
     path("throttle_test/", include("throttle_test.urls")),
     path("filter/", include("filter.urls")),
+    path("pagination/", include("pagination.urls")),
 
 
 
