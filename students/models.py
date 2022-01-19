@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-
+# 注意写模型的时候，每个数据项后面前外不要加comma，否则django不报错，但是不会生成这个数据项
 class Student(models.Model):
     SEX_OPTION = (
         (0, "unknown"),
