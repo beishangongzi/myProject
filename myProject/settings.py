@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'generic_viewset',
     'mixin_generic_viewset',
     'mixin_generic_viewset_router',
-    'opt',
+    'authenticate_permission',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -145,7 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'opt.authentication.CustomAuthentication',
+        'authenticate_permission.authentication.CustomAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
