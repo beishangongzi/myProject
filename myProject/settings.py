@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'sers',
     'school',
     'req',
-    'demo',
+    'view',
     'generic',
     'mixin',
     'mixin_generic',
