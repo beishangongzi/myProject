@@ -37,7 +37,7 @@ INSTALLED_APPS = [
 
     'drf_yasg_doc',
     'students',
-    'sers',
+    'serializer',
     'school',
     'req',
     'view',

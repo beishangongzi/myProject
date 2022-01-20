@@ -20,7 +20,7 @@ from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('students/', include('students.urls')),
-    path("sers/", include("sers.urls")),
+    path("serializer/", include("serializer.urls")),
     path("model_serializer/", include("model_serializer.urls")),
     path("school/", include("school.urls")),
     path("req/", include("req.urls")),
