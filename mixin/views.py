@@ -10,7 +10,7 @@ class StudentListView(GenericAPIView, CreateModelMixin, ListModelMixin):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):  # 参数的变化，大家要注意
         return self.create(request, *args, **kwargs)
 
     def get(self, request, *args, **kwargs):
@@ -21,7 +21,7 @@ class StudentDetailView(GenericAPIView, RetrieveModelMixin, UpdateModelMixin, De
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):  # 参数的变化，这里就没有pk了
         return self.retrieve(request, *args, **kwargs)
 
     def put(self, request, *args, **kwargs):
