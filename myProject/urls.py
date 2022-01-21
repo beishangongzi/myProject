@@ -24,7 +24,7 @@ urlpatterns = [
     path("model_serializer/", include("model_serializer.urls")),
     path("school/", include("school.urls")),
     path("req/", include("req.urls")),
-    path("demo/", include("view.urls")),
+    path("apiview/", include("apiview.urls")),
     path("generic/", include("generic.urls")),
     path("mixin/", include("mixin.urls")),
     path("mixin-generic/", include("mixin_generic.urls")),

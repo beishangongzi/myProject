@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'serializer',
     'school',
     'req',
-    'view',
+    'apiview',
     'generic',
     'mixin',
     'mixin_generic',
