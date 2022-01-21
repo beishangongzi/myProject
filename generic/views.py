@@ -7,8 +7,8 @@ from students.models import Student
 
 
 class StudentListView(View):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
+    queryset = Student.objects.all()  # 这是我们需要的模型的查询集合
+    serializer_class = StudentSerializer  # 这是序列化器列
 
     def get(self, request):
         serializers = self.serializer_class(self.get_queryset(), many=True)
@@ -17,7 +17,7 @@ class StudentListView(View):
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(True)
-        instance = serializer.save()
+        instance = serializer.save() #我们不在使用student，而是使用更加泛化的instance
         return Response(self.serializer_class(instance).data)
 
 
@@ -45,4 +45,3 @@ class StudentDetailView(View):
         instance = self.get_object()
         instance.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-    
