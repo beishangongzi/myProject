@@ -40,5 +40,6 @@ urlpatterns = [
     path("docs/", include_docs_urls(title="站点doc")),
     path("docs-drf-yasg/", include("drf_yasg_doc.urls")),
 
+    path('api-auth/', include('rest_framework.urls')),
 
 ]

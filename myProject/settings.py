@@ -156,3 +156,6 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': "exception.exceptions.custom_exception_handler",
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema'
 }
+
+
+LOGIN_REDIRECT_URL = '/authenticate_permission/students/'
